@@ -13,7 +13,7 @@ public class LogInScreen {
 
 	private WebDriverWait wait;
 
-	public LogInScreen(AndroidDriver<MobileElement> driver) {
+	public LogInScreen(AndroidDriver<WebElement> driver) {
 		PageFactory.initElements(driver, this);
 		wait = new WebDriverWait(driver, 10);
 	}

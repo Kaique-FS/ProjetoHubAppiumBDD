@@ -13,7 +13,7 @@ public class FiltroScreen {
 
 	private WebDriverWait wait;
 
-	public FiltroScreen(AndroidDriver<MobileElement> driver) {
+	public FiltroScreen(AndroidDriver<WebElement> driver) {
 		PageFactory.initElements(driver, this);
 		wait = new WebDriverWait(driver, 10);
 	}

@@ -3,12 +3,14 @@ package br.com.rsinet.hub.projeto.appium.bdd.sf;
 import java.time.Duration;
 
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import br.com.rsinet.hub.projeto.appium.bdd.cucumber.TestContext;
 import br.com.rsinet.hub.projeto.appium.bdd.managers.AndroidDriverManager;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.PerformsTouchActions;
@@ -19,9 +21,11 @@ import io.appium.java_client.touch.offset.PointOption;
 
 public class RegisterScreen {
 
+	private WebDriver driver;
 	private WebDriverWait wait;
+	private TestContext TC;
 
-	public RegisterScreen(AndroidDriver<MobileElement> driver) {
+	public RegisterScreen(AndroidDriver<WebElement> driver) {
 		PageFactory.initElements(driver, this);
 		wait = new WebDriverWait(driver, 10);
 	}
@@ -156,13 +160,13 @@ public class RegisterScreen {
 
 	public void Rola_A_Pagina(double inicio, double fim) throws Exception {
 
-		Dimension size = AndroidDriverManager.getDriver().manage().window().getSize();
+		Dimension size = TC.getAndroidDriverManager().getDriver().manage().window().getSize();
 
 		int x = size.width / 2;
 		int start_y = (int) (size.height * inicio);
 		int end_y = (int) (size.height * fim);
 
-		new TouchAction((PerformsTouchActions) AndroidDriverManager.getDriver()).press(PointOption.point(x, start_y))
+		new TouchAction((PerformsTouchActions) driver).press(PointOption.point(x, start_y))
 				.waitAction((WaitOptions.waitOptions(Duration.ofMillis(500))))//
 				.moveTo(PointOption.point(x, end_y))//
 				.release().perform();

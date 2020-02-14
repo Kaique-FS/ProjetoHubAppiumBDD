@@ -13,7 +13,7 @@ public class HomeScreen {
 
 	private WebDriverWait wait;
 
-	public HomeScreen(AndroidDriver<MobileElement> driver) {
+	public HomeScreen(AndroidDriver<WebElement> driver) {
 		PageFactory.initElements(driver, this);
 		wait = new WebDriverWait(driver, 10);
 	}

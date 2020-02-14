@@ -13,7 +13,7 @@ public class TabletsScreen {
 
 	private WebDriverWait wait;
 
-	public TabletsScreen(AndroidDriver<MobileElement> driver) {
+	public TabletsScreen(AndroidDriver<WebElement> driver) {
 		PageFactory.initElements(driver, this);
 		wait = new WebDriverWait(driver, 10);
 	}

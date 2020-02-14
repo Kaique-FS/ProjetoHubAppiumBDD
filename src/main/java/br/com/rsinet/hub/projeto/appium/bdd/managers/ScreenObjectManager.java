@@ -1,5 +1,7 @@
 package br.com.rsinet.hub.projeto.appium.bdd.managers;
 
+import org.openqa.selenium.WebElement;
+
 import br.com.rsinet.hub.projeto.appium.bdd.sf.FiltroScreen;
 import br.com.rsinet.hub.projeto.appium.bdd.sf.HeadphonesScreen;
 import br.com.rsinet.hub.projeto.appium.bdd.sf.HomeScreen;
@@ -8,12 +10,11 @@ import br.com.rsinet.hub.projeto.appium.bdd.sf.MiceScreen;
 import br.com.rsinet.hub.projeto.appium.bdd.sf.ProductScreen;
 import br.com.rsinet.hub.projeto.appium.bdd.sf.RegisterScreen;
 import br.com.rsinet.hub.projeto.appium.bdd.sf.TabletsScreen;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class ScreenObjectManager {
 
-	private AndroidDriver<MobileElement> driver;
+	private AndroidDriver<WebElement> driver;
 	private FiltroScreen FP;
 	private HeadphonesScreen HsP;
 	private HomeScreen HP;
@@ -23,7 +24,7 @@ public class ScreenObjectManager {
 	private RegisterScreen RP;
 	private TabletsScreen TP;
 	
-	public ScreenObjectManager(AndroidDriver<MobileElement> androidDriver) {
+	public ScreenObjectManager(AndroidDriver<WebElement> androidDriver) {
 		this.driver = androidDriver;
 	}
 

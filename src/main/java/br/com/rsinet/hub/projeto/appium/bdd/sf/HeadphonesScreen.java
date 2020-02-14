@@ -13,7 +13,7 @@ public class HeadphonesScreen {
 
 	private WebDriverWait wait;
 
-	public HeadphonesScreen(AndroidDriver<MobileElement> driver) {
+	public HeadphonesScreen(AndroidDriver<WebElement> driver) {
 		PageFactory.initElements(driver, this);
 		wait = new WebDriverWait(driver, 10);
 	}
