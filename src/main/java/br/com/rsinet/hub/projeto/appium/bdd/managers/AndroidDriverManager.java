@@ -14,10 +14,6 @@ public class AndroidDriverManager {
 	private DesiredCapabilities capabilities;
 
 	public AndroidDriver<WebElement> getDriver() throws Exception {
-		return (driver == null) ? AbreAndroid() : driver; 
-	}
-	
-	public AndroidDriver<WebElement> AbreAndroid() throws Exception {
 		if (driver == null) {
 			capabilities = new DesiredCapabilities();
 
@@ -26,6 +22,7 @@ public class AndroidDriverManager {
 			capabilities.setCapability("platformName", "Android");
 			capabilities.setCapability("appPackage", "com.Advantage.aShopping");
 			capabilities.setCapability("appActivity", "com.Advantage.aShopping.SplashActivity");
+			capabilities.setCapability("newCommandTimeOut", "120");
 
 			driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

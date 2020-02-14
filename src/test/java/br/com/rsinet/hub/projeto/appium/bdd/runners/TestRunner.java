@@ -8,12 +8,12 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/functionalTests", glue = {
-		"br.com.rsinet.hub.projeto.appium.bdd.stepsDefinitions" }, plugin = {
+		"br.com.rsinet.hub.projeto.appium.bdd.stepDefinitions" }, plugin = {
 				"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, monochrome = true, tags = {
 						"@CenarioSucesso, @CenarioFalha" })
 public class TestRunner {
-	@AfterClass
-	public static void writeExtentReport() {
-
-	}
+//	@AfterClass
+//	public static void writeExtentReport() {
+//
+//	}
 }

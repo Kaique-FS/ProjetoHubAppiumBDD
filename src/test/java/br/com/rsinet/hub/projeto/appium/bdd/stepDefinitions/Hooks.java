@@ -17,22 +17,22 @@ import cucumber.api.java.Before;
 
 public class Hooks {
 
-	TestContext TC;
+	TestContext tc;
 
 	public Hooks(TestContext context) {
-		TC = context;
+		tc = context;
 	}
 
 	@Before
 	public void BeforeSteps() throws Exception {
-		TC.getAndroidDriverManager().AbreAndroid();
+		tc.getAndroidDriverManager().getDriver();
 	}
 
 	@After(order = 1)
 	public void afterCenario(Scenario scenario) throws Exception {
 		String screenshotName = scenario.getName().replaceAll(" ", "_");
 		try {
-			File sourcePath = ((TakesScreenshot) TC.getAndroidDriverManager().AbreAndroid())
+			File sourcePath = ((TakesScreenshot) tc.getAndroidDriverManager().getDriver())
 					.getScreenshotAs(OutputType.FILE);
 
 			File destinationPath = new File(
@@ -48,6 +48,6 @@ public class Hooks {
 
 	@After(order = 0)
 	public void AfterSteps() {
-		TC.getAndroidDriverManager().FechaAndroid();
+		tc.getAndroidDriverManager().FechaAndroid();
 	}
 }

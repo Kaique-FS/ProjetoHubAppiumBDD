@@ -172,14 +172,14 @@ public class RegisterScreen {
 				.release().perform();
 	}
 
-	public void Rola_Paises(AndroidDriver<MobileElement> driver, String visibleText) {
+	public void Rola_Paises(AndroidDriver<WebElement> driver, String visibleText) {
 		driver.findElementByAndroidUIAutomator(
 				"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""
 						+ visibleText + "\").instance(0))")
 				.click();
 	}
 
-	public void Rola_Pagina(AndroidDriver<MobileElement> driver, String visibleText) {
+	public void Rola_Pagina(AndroidDriver<WebElement> driver, String visibleText) {
 		driver.findElementByAndroidUIAutomator(
 				"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""
 						+ visibleText + "\").instance(0))");
