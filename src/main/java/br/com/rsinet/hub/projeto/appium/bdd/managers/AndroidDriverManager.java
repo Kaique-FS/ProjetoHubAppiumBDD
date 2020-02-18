@@ -13,6 +13,7 @@ public class AndroidDriverManager {
 	private AndroidDriver<WebElement> driver;
 	private DesiredCapabilities capabilities;
 
+	@SuppressWarnings({ "rawtypes" })
 	public AndroidDriver<WebElement> getDriver() throws Exception {
 		if (driver == null) {
 			capabilities = new DesiredCapabilities();

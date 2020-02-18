@@ -11,38 +11,68 @@ import cucumber.api.java.pt.Quando;
 
 public class HomeScreenSteps {
 
-	HomeScreen hs;
-	TestContext tc;
+	HomeScreen HS;
+	TestContext TC;
 
 	public HomeScreenSteps(TestContext context) {
-		tc = context;
-		hs = tc.getPageObjectManager().getHomeScreen();
+		TC = context;
+		HS = TC.getPageObjectManager().getHomeScreen();
 	}
 	
 	@Dado("^usuário em questão está Pagina inicial$")
 	public void usuário_em_questão_está_Pagina_inicial() throws Exception {
-		tc.getAndroidDriverManager().getDriver();
+		TC.getAndroidDriverManager().getDriver();
 	}
 
 	@Quando("^clicar em menu$")
 	public void clicar_em_login() throws Throwable {
-		hs.Clica_No_Menu();
+		HS.Clica_No_Menu();
 	}
 
 	@Quando("^clicar em login$")
 	public void clicar_em_novo_usuario() throws Throwable {
-	    hs.Clica_Em_LogIn();
+	    HS.Clica_Em_LogIn();
+	}
+	
+	@Quando("^pesquisar produto existente$")
+	public void insere_texto_de_pesquisa_valido(){
+		HS.Insere_Dado_Lupa_1();
+	}
+	
+	@Quando("^pesquisar produto inexistente$")
+	public void insere_texto_de_pesquisa_invalido(){
+		HS.Insere_Dado_Lupa_2();
+	}
+	
+	@Quando("^fazer a busca do produto existente$")
+	public void clicar_na_lupa(){
+		HS.Clica_Na_Lupa();
+	}
+	
+	@Quando("^fazer a busca do produto inexistente$")
+	public void clicar_na_lupa_2(){
+		HS.Clica_Na_Lupa();
+	}
+	
+	@Quando("^clicar em headphones$")
+	public void clica_em_headphones(){
+		HS.Clica_Em_Headphones();
+	}
+	
+	@Quando("^clicar em tablets$")
+	public void clica_em_tablets(){
+		HS.Clica_Em_Tablets();
 	}
 	
 	@Entao("^entrar na conta cadastrada$")
 	public void entrar_na_conta_cadastrada() {
-		assertTrue(hs.Verifica_Usuario());
-		tc.getAndroidDriverManager().FechaAndroid();
+		assertTrue(HS.Verifica_Usuario());
+		TC.getAndroidDriverManager().FechaAndroid();
 	}
 	
 	@Entao("^aparece mensagem de usuario ja cadastrado$")
 	public void conferir_cadastro() {
-		assertFalse(hs.Verifica_Usuario());
-		tc.getAndroidDriverManager().FechaAndroid();
+		assertFalse(HS.Verifica_Usuario());
+		TC.getAndroidDriverManager().FechaAndroid();
 	}
 }

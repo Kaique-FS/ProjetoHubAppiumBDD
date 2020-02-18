@@ -6,16 +6,16 @@ import cucumber.api.java.pt.Quando;
 
 public class LogInScreenSteps {
 
-	LogInScreen ls;
+	LogInScreen LS;
 	TestContext tc;
 
 	public LogInScreenSteps(TestContext context) {
 		tc = context;
-		ls = tc.getPageObjectManager().getLogInScreen();
+		LS = tc.getPageObjectManager().getLogInScreen();
 	}
 	
 	@Quando("^clicar em novo usuario$")
 	public void clicar_em_novo_usuario() throws Throwable {
-		ls.Clica_Em_Novo_Usuario();
+		LS.Clica_Em_Novo_Usuario();
 	}
 }

@@ -10,29 +10,28 @@ import com.cucumber.listener.Reporter;
 import com.google.common.io.Files;
 
 import br.com.rsinet.hub.projeto.appium.bdd.cucumber.TestContext;
-import br.com.rsinet.hub.projeto.appium.bdd.managers.AndroidDriverManager;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
 public class Hooks {
 
-	TestContext tc;
+	TestContext TC;
 
 	public Hooks(TestContext context) {
-		tc = context;
+		TC = context;
 	}
 
 	@Before
 	public void BeforeSteps() throws Exception {
-		tc.getAndroidDriverManager().getDriver();
+		TC.getAndroidDriverManager().getDriver();
 	}
 
 	@After(order = 1)
 	public void afterCenario(Scenario scenario) throws Exception {
 		String screenshotName = scenario.getName().replaceAll(" ", "_");
 		try {
-			File sourcePath = ((TakesScreenshot) tc.getAndroidDriverManager().getDriver())
+			File sourcePath = ((TakesScreenshot) TC.getAndroidDriverManager().getDriver())
 					.getScreenshotAs(OutputType.FILE);
 
 			File destinationPath = new File(
@@ -48,6 +47,6 @@ public class Hooks {
 
 	@After(order = 0)
 	public void AfterSteps() {
-		tc.getAndroidDriverManager().FechaAndroid();
+		TC.getAndroidDriverManager().FechaAndroid();
 	}
 }

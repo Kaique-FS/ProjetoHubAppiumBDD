@@ -6,26 +6,26 @@ import io.appium.java_client.TouchAction;
 
 public class TestContext {
 
-	private AndroidDriverManager adm;
-	private ScreenObjectManager som;
-	public ScenarioContext sc;
+	private AndroidDriverManager ADM;
+	private ScreenObjectManager SOM;
+	public ScenarioContext SC;
 
 	public TestContext() throws Exception {
-		adm = new AndroidDriverManager();
-		som = new ScreenObjectManager(adm.getDriver());
-		sc = new ScenarioContext();
+		ADM = new AndroidDriverManager();
+		SOM = new ScreenObjectManager(ADM.getDriver());
+		SC = new ScenarioContext();
 	}
 
 	public AndroidDriverManager getAndroidDriverManager() {
-		return adm;
+		return ADM;
 	}
 
 	public ScreenObjectManager getPageObjectManager() {
-		return som;
+		return SOM;
 	}
 
 	public ScenarioContext getScenarioContext() {
-		return sc;
+		return SC;
 	}
 
 }

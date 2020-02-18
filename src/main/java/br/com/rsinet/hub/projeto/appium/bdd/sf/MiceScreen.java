@@ -20,7 +20,7 @@ public class MiceScreen {
 	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\\\"Search\\\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[1]")
 	private WebElement bnt_Produto1;
 	
-	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\\\"Search\\\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[2]")
+	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\"Search\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[2]")
 	private WebElement bnt_Produto2;
 	
 	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\\\"Search\\\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[3]")

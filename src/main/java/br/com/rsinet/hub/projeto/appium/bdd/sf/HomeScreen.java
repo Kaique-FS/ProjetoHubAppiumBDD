@@ -71,7 +71,7 @@ public class HomeScreen {
 	}
 	
 	public void Insere_Dado_Lupa_1() {
-		txt_Lupa.sendKeys("TOUCH");
+		txt_Lupa.sendKeys("Mice");
 	}
 	
 	public void Insere_Dado_Lupa_2() {

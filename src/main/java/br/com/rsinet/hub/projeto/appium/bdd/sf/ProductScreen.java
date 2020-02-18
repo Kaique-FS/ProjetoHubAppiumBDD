@@ -84,7 +84,7 @@ public class ProductScreen {
 		bnt_AddCart.click();
 	}
 	
-	public void Confirma_Produto() {
-		txtbx_ConfirmaProduto.isEnabled();
+	public boolean Confirma_Produto() {
+		return txtbx_ConfirmaProduto.isEnabled();
 	}
 }

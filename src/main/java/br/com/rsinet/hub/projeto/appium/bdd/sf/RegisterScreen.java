@@ -1,9 +1,6 @@
 package br.com.rsinet.hub.projeto.appium.bdd.sf;
 
-import java.time.Duration;
-
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -11,19 +8,16 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import br.com.rsinet.hub.projeto.appium.bdd.cucumber.TestContext;
-import br.com.rsinet.hub.projeto.appium.bdd.managers.AndroidDriverManager;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
 public class RegisterScreen {
 
-	private WebDriver driver;
 	private WebDriverWait wait;
 	private TestContext TC;
+	private TouchAction action;
 
 	public RegisterScreen(AndroidDriver<WebElement> driver) {
 		PageFactory.initElements(driver, this);
@@ -34,13 +28,13 @@ public class RegisterScreen {
 	 * Detalhes da Conta
 	 */
 
-	@FindBy(how = How.XPATH, using = "//android.view.ViewGroup[@content-desc=\\\"Home Page\\\"]/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.EditText")
+	@FindBy(how = How.XPATH, using = "//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.EditText")
 	private WebElement txtbx_NomeUsuario;
 
-	@FindBy(how = How.XPATH, using = "//android.view.ViewGroup[@content-desc=\\\"Home Page\\\"]/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.RelativeLayout/android.widget.EditText")
+	@FindBy(how = How.XPATH, using = "//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.RelativeLayout/android.widget.EditText")
 	private WebElement txtbx_Email;
 
-	@FindBy(how = How.XPATH, using = "//android.view.ViewGroup[@content-desc=\\\"Home Page\\\"]/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[3]/android.widget.RelativeLayout/android.widget.EditText")
+	@FindBy(how = How.XPATH, using = "//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[3]/android.widget.RelativeLayout/android.widget.EditText")
 	private WebElement txtbx_Senha;
 
 	@FindBy(how = How.XPATH, using = "//android.view.ViewGroup[@content-desc=\"Home Page\"]/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout[4]/android.widget.RelativeLayout/android.widget.EditText")
@@ -157,19 +151,18 @@ public class RegisterScreen {
 	public void Clica_Em_Registrar() {
 		btn_UsarLocalizacao.click();
 	}
-
+	
 	public void Rola_A_Pagina(double inicio, double fim) throws Exception {
 
 		Dimension size = TC.getAndroidDriverManager().getDriver().manage().window().getSize();
 
 		int x = size.width / 2;
-		int start_y = (int) (size.height * inicio);
-		int end_y = (int) (size.height * fim);
 
-		new TouchAction((PerformsTouchActions) driver).press(PointOption.point(x, start_y))
-				.waitAction((WaitOptions.waitOptions(Duration.ofMillis(500))))//
-				.moveTo(PointOption.point(x, end_y))//
-				.release().perform();
+		int yInicial = (int) (size.height * inicio);
+		int yFinal = (int) (size.height * fim);
+
+		new TouchAction((PerformsTouchActions) TC.getAndroidDriverManager()).press(PointOption.point(x, yInicial)).waitAction()
+				.moveTo(PointOption.point(x, yFinal)).release().perform();
 	}
 
 	public void Rola_Paises(AndroidDriver<WebElement> driver, String visibleText) {
