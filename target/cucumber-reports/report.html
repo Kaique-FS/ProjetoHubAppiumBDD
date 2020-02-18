@@ -30,6 +30,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -42,7 +43,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-				<span class='label suite-start-time'>Feb 17, 2020 7:04:20 PM</span>
+				<span class='label suite-start-time'>Feb 18, 2020 3:53:39 PM</span>
 			</a>
 			<a href='#!'>
 				<span class='label'>v3.0.3</span>
@@ -64,6 +65,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -76,8 +78,8 @@
 					<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@CenarioPositivo</a></li>
-					<li><a href='#'>@CenarioNegativo</a></li>
+					<li><a href='#'>@LupaPositivo</a></li>
+					<li><a href='#'>@LupaNegativo</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -125,10 +127,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span><span class='strong'>8</span> test(s) passed</span>
+					<span><span class='strong'>7</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong'>0</span> test(s) failed, <span class='strong'>0</span> others
+					<span class='strong'>1</span> test(s) failed, <span class='strong'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -140,10 +142,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span><span class='strong'>8</span> step(s) passed</span>
+					<span><span class='strong'>7</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong'>0</span> step(s) failed, <span class='strong'>0</span> others
+					<span class='strong'>1</span> step(s) failed, <span class='strong'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -158,33 +160,33 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Escolher produto pela barra de pesquisa</span>
-						<span class='test-time'>Feb 17, 2020 7:04:20 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Feb 18, 2020 3:53:39 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Feb 17, 2020 7:04:20 PM</span>
-	<span class='label end-time'>Feb 17, 2020 7:04:42 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+28ms</span>
+	<span class='label start-time'>Feb 18, 2020 3:53:39 PM</span>
+	<span class='label end-time'>Feb 18, 2020 3:54:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 35s+402ms</span>
 </div>
 	<ul class='collapsible node-list' data-collapsible='accordion'>
 		
-				<li class='node level-1  pass' status='pass' test-id='2'>
+				<li class='node level-1  fail' status='fail' test-id='2'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Scenario: Encontrar produto existente</div>						
-						<span class='node-time'>Feb 17, 2020 7:04:20 PM</span>
-						<span class='node-duration'>0h 0m 11s+430ms</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='node-time'>Feb 18, 2020 3:53:39 PM</span>
+						<span class='node-duration'>0h 0m 18s+801ms</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
 				<li class='node level-2 leaf pass' status='pass' test-id='3'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Dado usuário em questão está Pagina inicial</div>						
-						<span class='node-time'>Feb 17, 2020 7:04:27 PM</span>
-						<span class='node-duration'>0h 0m 0s+286ms</span>
+						<span class='node-time'>Feb 18, 2020 3:53:53 PM</span>
+						<span class='node-duration'>0h 0m 0s+238ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -200,7 +202,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>7:04:28 PM</td>
+													<td class='timestamp'>3:53:54 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -211,8 +213,8 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='4'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Quando pesquisar produto existente</div>						
-						<span class='node-time'>Feb 17, 2020 7:04:28 PM</span>
-						<span class='node-duration'>0h 0m 0s+897ms</span>
+						<span class='node-time'>Feb 18, 2020 3:53:54 PM</span>
+						<span class='node-duration'>0h 0m 1s+519ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -228,7 +230,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>7:04:29 PM</td>
+													<td class='timestamp'>3:53:55 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -239,8 +241,8 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='5'>
 					<div class='collapsible-header'>
 						<div class='node-name'>E fazer a busca do produto existente</div>						
-						<span class='node-time'>Feb 17, 2020 7:04:29 PM</span>
-						<span class='node-duration'>0h 0m 0s+544ms</span>
+						<span class='node-time'>Feb 18, 2020 3:53:55 PM</span>
+						<span class='node-duration'>0h 0m 0s+573ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -256,7 +258,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>7:04:29 PM</td>
+													<td class='timestamp'>3:53:56 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -264,12 +266,12 @@
 								</div>
 						</div>
 				</li>
-				<li class='node level-2 leaf pass' status='pass' test-id='6'>
+				<li class='node level-2 leaf fail' status='fail' test-id='6'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Entao encontrar produto existente</div>						
-						<span class='node-time'>Feb 17, 2020 7:04:29 PM</span>
-						<span class='node-duration'>0h 0m 2s+205ms</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='node-time'>Feb 18, 2020 3:53:56 PM</span>
+						<span class='node-duration'>0h 0m 1s+915ms</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 						<div class='collapsible-body'>
 								<div class='node-steps'>
@@ -282,10 +284,50 @@
 											</tr>
 										</thead>
 										<tbody>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>7:04:31 PM</td>
-													<td class='step-details'>passed</td>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:53:58 PM</td>
+													<td class='step-details'><pre>org.openqa.selenium.InvalidSelectorException: java.lang.IllegalArgumentException: Unable to compile '//android.widget.RelativeLayout[@content-desc=\"Search\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[3]'. See Cause.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RSI1525', ip: '10.1.11.196', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.Advantage.aShopping.Spl..., appPackage: com.Advantage.aShopping, databaseEnabled: false, desired: {appActivity: com.Advantage.aShopping.Spl..., appPackage: com.Advantage.aShopping, deviceName: AOSP on IA Emulator, newCommandTimeOut: 120, platformName: android, platformVersion: 9}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: AOSP on IA Emulator, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeOut: 120, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 72, takesScreenshot: true, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 200b2ada-6e96-43aa-a01d-50151afc6f65
+*** Element info: {Using=xpath, value=//android.widget.RelativeLayout[@content-desc=\"Search\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[3]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.isEnabled(Unknown Source)
+	at br.com.rsinet.hub.projeto.appium.bdd.sf.MiceScreen.Confirma_Produto(MiceScreen.java:87)
+	at br.com.rsinet.hub.projeto.appium.bdd.stepDefinitions.MiceScreenSteps.encontrar_produto_existente(MiceScreenSteps.java:22)
+	at ✽.Entao encontrar produto existente(PesquisaLupa.feature:14)
+</pre></td>
 												</tr>
 										</tbody>
 									</table>
@@ -300,15 +342,15 @@
 				<li class='node level-1  pass' status='pass' test-id='7'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Scenario: Não encontrar produto</div>						
-						<span class='node-time'>Feb 17, 2020 7:04:32 PM</span>
-						<span class='node-duration'>0h 0m 9s+542ms</span>
+						<span class='node-time'>Feb 18, 2020 3:54:00 PM</span>
+						<span class='node-duration'>0h 0m 14s+655ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<ul class='collapsible node-list' data-collapsible='accordion'>
 				<li class='node level-2 leaf pass' status='pass' test-id='8'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Dado usuário em questão está Pagina inicial</div>						
-						<span class='node-time'>Feb 17, 2020 7:04:39 PM</span>
+						<span class='node-time'>Feb 18, 2020 3:54:11 PM</span>
 						<span class='node-duration'>0h 0m 0s+1ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
@@ -325,7 +367,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>7:04:39 PM</td>
+													<td class='timestamp'>3:54:11 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -336,8 +378,8 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='9'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Quando pesquisar produto inexistente</div>						
-						<span class='node-time'>Feb 17, 2020 7:04:39 PM</span>
-						<span class='node-duration'>0h 0m 1s+667ms</span>
+						<span class='node-time'>Feb 18, 2020 3:54:11 PM</span>
+						<span class='node-duration'>0h 0m 2s+41ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -353,7 +395,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>7:04:40 PM</td>
+													<td class='timestamp'>3:54:13 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -364,8 +406,8 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='10'>
 					<div class='collapsible-header'>
 						<div class='node-name'>E fazer a busca do produto inexistente</div>						
-						<span class='node-time'>Feb 17, 2020 7:04:40 PM</span>
-						<span class='node-duration'>0h 0m 0s+538ms</span>
+						<span class='node-time'>Feb 18, 2020 3:54:13 PM</span>
+						<span class='node-duration'>0h 0m 0s+555ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -381,7 +423,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>7:04:41 PM</td>
+													<td class='timestamp'>3:54:13 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -392,8 +434,8 @@
 				<li class='node level-2 leaf pass' status='pass' test-id='11'>
 					<div class='collapsible-header'>
 						<div class='node-name'>Entao produto não aparece na tela</div>						
-						<span class='node-time'>Feb 17, 2020 7:04:41 PM</span>
-						<span class='node-duration'>0h 0m 1s+36ms</span>
+						<span class='node-time'>Feb 18, 2020 3:54:13 PM</span>
+						<span class='node-duration'>0h 0m 1s+67ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -409,7 +451,7 @@
 										<tbody>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>7:04:42 PM</td>
+													<td class='timestamp'>3:54:14 PM</td>
 													<td class='step-details'>passed</td>
 												</tr>
 										</tbody>
@@ -476,15 +518,15 @@
 				
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@CenarioPositivo</span>
+						<span class='category-name'>@LupaPositivo</span>
 						<span class='category-status right'>
-							<span class='label pass'>1</span>
+							<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 					
@@ -499,9 +541,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 17, 2020 7:04:20 PM</td>
+										<td>Feb 18, 2020 3:53:39 PM</td>
 										<td class='linked' test-id='2'>Escolher produto pela barra de pesquisa.Scenario: Encontrar produto existente</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -510,7 +552,7 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@CenarioNegativo</span>
+						<span class='category-name'>@LupaNegativo</span>
 						<span class='category-status right'>
 							<span class='label pass'>1</span>
 						</span>
@@ -533,7 +575,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 17, 2020 7:04:32 PM</td>
+										<td>Feb 18, 2020 3:54:00 PM</td>
 										<td class='linked' test-id='7'>Escolher produto pela barra de pesquisa.Scenario: Não encontrar produto</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -553,7 +595,108 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Exceptions</h3>
+			<ul id='exception-collection' class='exception-collection'>
+				
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.InvalidSelectorException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>	
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 18, 2020 3:53:39 PM</td>
+										<td class='linked' test-id='2'>Escolher produto pela barra de pesquisa.Scenario: Encontrar produto existente</td>
+										<td><pre><pre>org.openqa.selenium.InvalidSelectorException: java.lang.IllegalArgumentException: Unable to compile '//android.widget.RelativeLayout[@content-desc=\"Search\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[3]'. See Cause.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RSI1525', ip: '10.1.11.196', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.Advantage.aShopping.Spl..., appPackage: com.Advantage.aShopping, databaseEnabled: false, desired: {appActivity: com.Advantage.aShopping.Spl..., appPackage: com.Advantage.aShopping, deviceName: AOSP on IA Emulator, newCommandTimeOut: 120, platformName: android, platformVersion: 9}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: AOSP on IA Emulator, deviceName: emulator-5554, deviceScreenDensity: 480, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeOut: 120, pixelRatio: 3, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 72, takesScreenshot: true, viewportRect: {height: 1704, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: 200b2ada-6e96-43aa-a01d-50151afc6f65
+*** Element info: {Using=xpath, value=//android.widget.RelativeLayout[@content-desc=\"Search\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[3]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.isEnabled(Unknown Source)
+	at br.com.rsinet.hub.projeto.appium.bdd.sf.MiceScreen.Confirma_Produto(MiceScreen.java:87)
+	at br.com.rsinet.hub.projeto.appium.bdd.stepDefinitions.MiceScreenSteps.encontrar_produto_existente(MiceScreenSteps.java:22)
+	at ✽.Entao encontrar produto existente(PesquisaLupa.feature:14)
+</pre></pre></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -573,19 +716,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 17, 2020 7:04:20 PM</div>
+					<div class='panel-lead'>Feb 18, 2020 3:53:39 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 17, 2020 7:04:43 PM</div>
+			 		<div class='panel-lead'>Feb 18, 2020 3:54:16 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>23,134ms</div>
+					<div class='panel-lead'>37,346ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -600,13 +743,13 @@
 							<th>Others</th>
 						</tr>
 						<tr>
-							<td>@CenarioPositivo</td>
-							<td>1</td>
+							<td>@LupaPositivo</td>
 							<td>0</td>
+							<td>1</td>
 							<td>0</td>
 						</tr>
 						<tr>
-							<td>@CenarioNegativo</td>
+							<td>@LupaNegativo</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -623,22 +766,22 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 8,
-				failParent: 0,
+				passParent: 7,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
-				passChild: 8,
-				failChild: 0,
+				passChild: 7,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 0,
+				exceptionsChild: 1,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

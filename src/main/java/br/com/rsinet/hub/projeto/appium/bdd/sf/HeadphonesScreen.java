@@ -17,16 +17,16 @@ public class HeadphonesScreen {
 		wait = new WebDriverWait(driver, 10);
 	}
 	
-	@FindBy(how = How.XPATH, using = "android.widget.RelativeLayout[@content-desc=\\\"Headphones\\\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[1]")
+	@FindBy(how = How.XPATH, using = "android.widget.RelativeLayout[@content-desc=\"Headphones\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[1]")
 	private WebElement bnt_Produto1;
 	
-	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\\\"Headphones\\\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[2]")
+	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\"Headphones\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[2]")
 	private WebElement bnt_Produto2;
 	
-	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\\\"Headphones\\\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[3]")
+	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\"Headphones\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[3]")
 	private WebElement bnt_Produto3;
 	
-	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\\\"Headphones\\\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[4]")
+	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\"Headphones\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[4]")
 	private WebElement bnt_Produto4;
 	
 	public void Clica_Produto_1() {

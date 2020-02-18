@@ -16,8 +16,6 @@ import io.appium.java_client.touch.offset.PointOption;
 public class RegisterScreen {
 
 	private WebDriverWait wait;
-	private TestContext TC;
-	private TouchAction action;
 
 	public RegisterScreen(AndroidDriver<WebElement> driver) {
 		PageFactory.initElements(driver, this);
@@ -152,29 +150,4 @@ public class RegisterScreen {
 		btn_UsarLocalizacao.click();
 	}
 	
-	public void Rola_A_Pagina(double inicio, double fim) throws Exception {
-
-		Dimension size = TC.getAndroidDriverManager().getDriver().manage().window().getSize();
-
-		int x = size.width / 2;
-
-		int yInicial = (int) (size.height * inicio);
-		int yFinal = (int) (size.height * fim);
-
-		new TouchAction((PerformsTouchActions) TC.getAndroidDriverManager()).press(PointOption.point(x, yInicial)).waitAction()
-				.moveTo(PointOption.point(x, yFinal)).release().perform();
-	}
-
-	public void Rola_Paises(AndroidDriver<WebElement> driver, String visibleText) {
-		driver.findElementByAndroidUIAutomator(
-				"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""
-						+ visibleText + "\").instance(0))")
-				.click();
-	}
-
-	public void Rola_Pagina(AndroidDriver<WebElement> driver, String visibleText) {
-		driver.findElementByAndroidUIAutomator(
-				"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\""
-						+ visibleText + "\").instance(0))");
-	}
 }

@@ -44,6 +44,9 @@ public class MiceScreen {
 	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\\\"Search\\\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[3]")
 	private WebElement bnt_Produto9;
 	
+	@FindBy(how = How.ID, using = "com.Advantage.aShopping:id/textViewNoProductsToShow")
+	private WebElement txtbx_ConfirmaProduto;
+	
 	public void Clica_Produto_1() {
 		bnt_Produto1.click();
 	}
@@ -78,5 +81,9 @@ public class MiceScreen {
 	
 	public void Clica_Produto_9() {
 		bnt_Produto9.click();
+	}
+	
+	public boolean Confirma_Produto() {
+		return bnt_Produto3.isDisplayed();
 	}
 }

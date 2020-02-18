@@ -18,13 +18,13 @@ public class TabletsScreen {
 		wait = new WebDriverWait(driver, 10);
 	}
 	
-	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\\\"Tablets\\\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[1]")
+	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\"Tablets\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[1]")
 	private WebElement bnt_Produto1;
 	
-	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\\\"Tablets\\\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[2]")
+	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\"Tablets\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[2]")
 	private WebElement bnt_Produto2;
 	
-	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\\\"Tablets\\\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[3]")
+	@FindBy(how = How.XPATH, using = "//android.widget.RelativeLayout[@content-desc=\"Tablets\"]/android.widget.LinearLayout/android.widget.GridView/android.widget.RelativeLayout[3]")
 	private WebElement bnt_Produto3;
 	
 	public void Clica_Produto_1() {

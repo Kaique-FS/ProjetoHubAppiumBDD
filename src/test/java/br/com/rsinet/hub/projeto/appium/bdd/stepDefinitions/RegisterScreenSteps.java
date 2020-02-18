@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import br.com.rsinet.hub.projeto.appium.bdd.cucumber.TestContext;
 import br.com.rsinet.hub.projeto.appium.bdd.sf.RegisterScreen;
+import br.com.rsinet.hub.projeto.appium.bdd.sf.RolaPaginaScreen;
 import cucumber.api.java.pt.Quando;
 import io.appium.java_client.android.AndroidDriver;
 
@@ -13,6 +14,7 @@ public class RegisterScreenSteps {
 	private WebDriver driver;
 	private RegisterScreen RS;
 	private TestContext TC;
+	private RolaPaginaScreen RPS;
 
 	public RegisterScreenSteps(TestContext context) {
 		TC = context;
@@ -37,7 +39,7 @@ public class RegisterScreenSteps {
 	@Quando("^inserir a confirmação da senha$")
 	public void inserir_a_confirmação_da_senha() throws Exception {
 		RS.Insere_Confirma_Senha();
-		RS.Rola_A_Pagina(0.9, 0.0);
+		RPS.Rola_Pagina((AndroidDriver<WebElement>) driver, "PHONE NUMBER");
 	}
 
 	@Quando("^inserir o primeiro nome$")
@@ -58,7 +60,7 @@ public class RegisterScreenSteps {
 	@Quando("^inserir o pais$")
 	public void inserir_o_pais() {
 		RS.Clica_Em_Pais();
-		RS.Rola_Paises((AndroidDriver<WebElement>) driver, "Brazil");
+		RPS.Rola_Paises((AndroidDriver<WebElement>) driver, "Brazil");
 	}
 
 	@Quando("^inserir a cidade$")

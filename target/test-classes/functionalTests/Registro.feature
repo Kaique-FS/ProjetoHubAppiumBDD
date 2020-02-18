@@ -24,10 +24,10 @@ Contexto:
 	E clica em propagandas
 	E clica em registrar
 
-@CenarioSucesso
+@RegistroPositivo
 Cenario: Cliente realiza um cadastro no site
 	Entao entrar na conta cadastrada
 
-@CenarioFalha
+@RegistroNegativo
 Cenario: Cliente realiza um cadastro ja existente
 	Entao aparece mensagem de usuario ja cadastrado
